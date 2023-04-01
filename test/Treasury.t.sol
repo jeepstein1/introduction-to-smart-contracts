@@ -135,4 +135,10 @@ contract TreasuryTest is Test {
 
         assertEq(treasury.getBalance(), 0.8 ether);
     }
+
+    //test function for setDepositVal - Jenny
+    function testSetDepositVal() public {
+        //test with a prespecified deposit of 100
+        assertEq(treasury.setDepositVal(depositVal(100)),depositVal);
+    }
 }
