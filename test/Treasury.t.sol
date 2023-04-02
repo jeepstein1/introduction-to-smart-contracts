@@ -141,4 +141,10 @@ contract TreasuryTest is Test {
         //test with a prespecified deposit of 100
         assertEq(treasury.setDepositVal(depositVal(100)),depositVal);
     }
+
+    //test function for setTransactionStatus - Ian
+    function testSetTransactionStatus() public {
+        //test with setting it True since it defaults to false
+        assertEq(treasury.setTransactionStatus(true), true);
+    }
 }

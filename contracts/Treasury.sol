@@ -10,7 +10,8 @@ import "openzeppelin-contracts/contracts/access/Ownable.sol";
 contract Treasury is Ownable {
 
     //initialize deposit variable - setDepositVal function
-    uint public depositVal; 
+    uint public depositVal;
+    bool public isTransactionPublic = false; 
 
     // Function to deposit Ether into the contract
     function deposit() external payable {
@@ -58,5 +59,10 @@ contract Treasury is Ownable {
     //function to set the value of a deposit made- Jenny
     function setDepositVal (uint depositVal) public{
         depositVal =  depositVal;
+    }
+
+    //function to set whether transaction is publicly viewable - Ian
+    function setTransactionStatus (bool isPublic) public{
+        isTransactionPublic = isPublic;
     }
 }
