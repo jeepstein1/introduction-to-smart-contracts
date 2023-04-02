@@ -148,6 +148,7 @@ contract TreasuryTest is Test {
     //test function for setTransactionStatus - Ian
     function testSetTransactionStatus() public {
         //test with setting it True since it defaults to false
-        assertEq(treasury.setTransactionStatus(true), true);
+        treasury.setTransactionStatus(true);
+        assertEq(treasury.getTransactionStatus(), true);
     }
 }

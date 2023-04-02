@@ -69,4 +69,7 @@ contract Treasury is Ownable {
     function setTransactionStatus (bool isPublic) public{
         isTransactionPublic = isPublic;
     }
+    function getTransactionStatus() external view returns (bool){
+        return isTransactionPublic;
+    }
 }
