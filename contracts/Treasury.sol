@@ -72,4 +72,9 @@ contract Treasury is Ownable {
     function getTransactionStatus() external view returns (bool){
         return isTransactionPublic;
     }
+
+    //function that notifies user if the account balancein below 10 - Rodrigo
+     function isBalanceLow() external view returns (bool){
+        return getBalance() < 10;
+    }
 }

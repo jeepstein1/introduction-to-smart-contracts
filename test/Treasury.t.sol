@@ -151,4 +151,13 @@ contract TreasuryTest is Test {
         treasury.setTransactionStatus(true);
         assertEq(treasury.getTransactionStatus(), true);
     }
+
+    //test function for isBalanceLow - Rodrigo
+    function testIsBalanceLow() public {
+        //test if balance is low after withdrawing 1 from the account
+        treasury.withdraw(1,address(1));
+        //make sure that it is still false, 1 shouldn't bring the
+        // account balance to <10 unless it was 11 before
+        assertEq(treasury.isBalanceLow(), false); 
+    }
 }
