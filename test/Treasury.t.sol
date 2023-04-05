@@ -160,7 +160,6 @@ contract TreasuryTest is Test {
         // account balance to <10 unless it was 11 before
         uint256 balance = treasury.getBalance();
         if (balance < 10){
-
             assertEq(treasury.isBalanceLow(), true); 
         }
         else {
