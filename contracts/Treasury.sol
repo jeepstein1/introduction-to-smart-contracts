@@ -75,6 +75,6 @@ contract Treasury is Ownable {
 
     //function that notifies user if the account balancein below 10 - Rodrigo
      function isBalanceLow() external view returns (bool){
-        return getBalance() < 10;
+        return address(this).balance < 10;
     }
 }

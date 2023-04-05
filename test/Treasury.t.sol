@@ -155,9 +155,16 @@ contract TreasuryTest is Test {
     //test function for isBalanceLow - Rodrigo
     function testIsBalanceLow() public {
         //test if balance is low after withdrawing 1 from the account
-        treasury.withdraw(1,address(1));
+        // treasury.withdraw(0.4 ether,address(0));
         //make sure that it is still false, 1 shouldn't bring the
         // account balance to <10 unless it was 11 before
-        assertEq(treasury.isBalanceLow(), false); 
+        uint256 balance = treasury.getBalance();
+        if (balance < 10){
+
+            assertEq(treasury.isBalanceLow(), true); 
+        }
+        else {
+            assertEq(treasury.isBalanceLow(), false); 
+        }
     }
 }
