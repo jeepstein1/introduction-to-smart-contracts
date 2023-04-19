@@ -152,6 +152,14 @@ contract TreasuryTest is Test {
         assertEq(treasury.getDepositVal(), 100);
     }
 
+    //test function for setProjectedBal and getProjectedBal - Jenny
+    function testSetProjectedBal() public {
+        //set deposit value to 100, used for later retrieval
+        treasury.setProjectedBal(100);
+        //test equality of prespecified deposit of 100
+        assertEq(treasury.getDepositVal(), 100);
+    }
+
 
     //test function for setTransactionStatus - Ian
     function testSetTransactionStatus() public {
