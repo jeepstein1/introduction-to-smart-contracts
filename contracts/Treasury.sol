@@ -11,6 +11,8 @@ contract Treasury is Ownable {
 
     //initialize deposit variable - setDepositVal function
     uint256 public amountDeposited = 0;
+    //initialize withdrawal variable - setDepositVal function
+    uint256 public amountWithdrawn = 0;
     bool public isTransactionPublic = false; 
 
     // Function to deposit Ether into the contract
@@ -63,6 +65,15 @@ contract Treasury is Ownable {
     //function to retrieve the deposit value set above - Jenny
     function getDepositVal() external view returns (uint256){
         return amountDeposited;
+    }
+
+    //function to set the value of a withdrawal made- Jenny
+    function setWithdrawalVal (uint withdrawalVal) public{
+        amountWithdrawn =  withdrawalVal;
+    }
+    //function to retrieve the withdrawal value set above - Jenny
+    function getWithdrawalVal() external view returns (uint256){
+        return amountWithdrawn;
     }
 
     //function to set whether transaction is publicly viewable - Ian
