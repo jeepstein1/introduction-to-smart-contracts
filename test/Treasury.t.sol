@@ -137,6 +137,14 @@ contract TreasuryTest is Test {
     }
 
     //test function for setDepositVal and getDepositVal - Jenny
+    function setWithdrawalVal() public {
+        //set withdrawal value to 100, used for later retrieval
+        treasury.setWithdrawalVal(100);
+        //test equality of prespecified deposit of 100
+        assertEq(treasury.getWithdrawalVal(), 100);
+    }
+
+    //test function for setDepositVal and getDepositVal - Jenny
     function testSetDepositVal() public {
         //set deposit value to 100, used for later retrieval
         treasury.setDepositVal(100);
