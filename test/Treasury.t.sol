@@ -157,7 +157,7 @@ contract TreasuryTest is Test {
         //set deposit value to 100, used for later retrieval
         treasury.setProjectedBal(100);
         //test equality of prespecified deposit of 100
-        assertEq(treasury.getDepositVal(), 100);
+        assertEq(treasury.getProjectedBal(), 100);
     }
 
 
