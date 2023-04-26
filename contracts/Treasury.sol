@@ -17,7 +17,12 @@ contract Treasury is Ownable {
     uint256 public currentBalance = 0;
     //initialize projectedBal
     uint256 public projectedBal = 0;
-    bool public isTransactionPublic = false; 
+    //initialize transaction status to private
+    bool public isTransactionPublic = false;
+    //for simply logging financial transactions, set purchase to zero (selling bonds, stocks etc, withdrawing money)
+    bool public isTransactionPurchase = false;
+    //for logging financial transactions, default amount to zero for transaction
+    uint256 public transactionAmount = 0;
 
     // Function to deposit Ether into the contract
     function deposit() external payable {
@@ -95,9 +100,29 @@ contract Treasury is Ownable {
     function setTransactionStatus (bool isPublic) public{
         isTransactionPublic = isPublic;
     }
+    //function to check if a transaction is publicly viewable - Ian
     function getTransactionStatus() external view returns (bool){
         return isTransactionPublic;
     }
+
+    //function to set whether a logged transaction is a purchase or sale of some kind - Ian
+    function setTransactionType(bool isPurchase) public {
+        isTransactionPurchase = isPurchase;
+    } 
+    //function to get whether a logged transaction was a purchase or sale of some kind - Ian
+    function getTransactionType() external view returns (bool){
+        return isTransactionPurchase;
+    }
+    
+    //function to set a logged transactions amount - Ian
+    function setTransactionAmount(uint256 amount) public {
+        transactionAmount = amount;
+    }
+    //function to get a logged transactions' amount - Ian
+    function getTransactionAmount() external view returns (uint256){
+        return transactionAmount;
+    }
+
 
     //function that notifies user if the account balancein below 10 - Rodrigo
      function isBalanceLow() external view returns (bool){

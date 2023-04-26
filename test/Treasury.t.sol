@@ -161,12 +161,30 @@ contract TreasuryTest is Test {
     }
 
 
-    //test function for setTransactionStatus - Ian
+    //test function for setTransactionStatus and getTransactionStatus - Ian
     function testSetTransactionStatus() public {
         //test with setting it True since it defaults to false
         treasury.setTransactionStatus(true);
+        //check that the getter function works and the setter function set it to true
         assertEq(treasury.getTransactionStatus(), true);
     }
+
+    //test function for setTransactionType and getTransactionType - Ian
+    function testSetTransactionType() public {
+        //test with setting it True since it defaults to false
+        treasury.setTransactionType(true);
+        //check that the getter function works and the setter function set it to true
+        assertEq(treasury.getTransactionType(), true);
+    }
+
+    //test function for setTransactionAmount and getTransactionAmount - Ian
+    function testSetTransactionAmount() public {
+        //test with setting amount to 100
+        treasury.setTransactionAmount(100);
+        //check to ensure getter function works and the setter function set it successfully to 100
+        assertEq(treasury.getTransactionAmount(), 100);
+    }
+
 
     //test function for isBalanceLow - Rodrigo
     function testIsBalanceLow() public {
