@@ -104,6 +104,37 @@ If you get an error similar to this:
 ```
 Then run: `npm run clean`
 
+## Deno and Aleph
+
+### Setting up a Deno webserver linked to Github
+
+[`https://spreston8-cspc-298-website.deno.dev/`](https://spreston8-cspc-298-website.deno.dev/): An example webserver that can be used to donate money to a project. It runs on Deno and Aleph.js and includes wallet connect.
+
+Steps to deploy your own site to https://deno.com/deploy
+
+1. Go to https://deno.com/deploy and sign up/ sign in. Needs github access.
+2. Make sure your repo is uptodate with this one.
+3. Create new project and link your github repo to project with entrypoint being `frontend/server.ts`. Choose automatic.
+
+### Installing Deno locally
+
+If you want to install Deno locally:
+
+[Deno installation](https://deno.com/manual@v1.33.1/getting_started/installation)
+
+[Aleph.js](https://alephjs.org/)
+
+Run the webserver locally:
+
+```
+cd frontend
+deno task dev
+```
+
+---
+
+---
+
 [^error]: Error message occaionally seen after `npm run compile`:
 
     ```
