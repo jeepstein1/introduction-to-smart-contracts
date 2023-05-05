@@ -7,6 +7,12 @@ Ian Hakeman, Jenny Epstein, Rodrigo Duran
 
 The group will be composed of Jenny Epstein, Ian Hakeman, and Rodrigo Durán. For this project, we are choosing to develop a smart contract for crowdfunding an application that will monitor contributions to an investment account. The contract will hold individual transactions representing money deposited and withdrawn in an investment account. To minimize the amount of data stored on the chain, the chain would only store hashes created from the transactions, but users would be able to see their transactions and the corresponding hashes on their end. This prevents shady transactions or failures because the hash being on the chain makes it immutable. As individuals frequently move large sums of money in and out of an account, having an immutable record for future reference will be useful in terms of bookkeeping and just keeping track of things in general. Over a prolonged investment period, investors may lose track of all the transactions performed, which may be solved by referencing the transactions saved in a smart contract. Or to match up a transaction that they may have listed somewhere but not followed through with, they can simply hash the transaction and then find that hash on the chain. Transparency within a financial setting is crucial to minimize risk. With information stored publicly on the chain, individuals may revisit the transactions previously made to identify investment strategies or prevent unethical practices. There are a couple of directions that could be taken with this, for example some transactions and information could be make public (for example to promote transparency among politicians for stock trades, bonds, or other things), or it could be privatized to the individual so that only they (and those they transacted with) can see the information. Potentially, it could be an interface used by financial institutions.
 
+Deployed Contract Link:
+https://goerli.etherscan.io/address/0xCfB2fbE524579d5Ad47860284Ee51efdEF6BcD7D#code
+
+Contract Address:
+0xcf4E841Efa1962607c5D35dDC493A79823ce2808 
+
 ## Introduction to Smart Contracts
 
 (created by [Alexander Kurz](https://www.chapman.edu/our-faculty/alexander-kurz) and [Ronan Kearns](https://www.linkedin.com/in/ronank/) from Chapman and [Jeff Turner](https://www.linkedin.com/in/composedao/) and Steve Preston from ComposeDAO)
