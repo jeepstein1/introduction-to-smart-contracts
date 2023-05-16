@@ -13,6 +13,9 @@ https://goerli.etherscan.io/address/0xCfB2fbE524579d5Ad47860284Ee51efdEF6BcD7D#c
 Contract Address:
 0xcf4E841Efa1962607c5D35dDC493A79823ce2808 
 
+Link to video:
+https://youtu.be/Bwi883JwixM
+
 ## Introduction to Smart Contracts
 
 (created by [Alexander Kurz](https://www.chapman.edu/our-faculty/alexander-kurz) and [Ronan Kearns](https://www.linkedin.com/in/ronank/) from Chapman and [Jeff Turner](https://www.linkedin.com/in/composedao/) and Steve Preston from ComposeDAO)
