@@ -16,6 +16,28 @@ Contract Address:
 Link to video:
 https://youtu.be/Bwi883JwixM
 
+### Motivation and Background
+
+We wanted to create this smart contract to allow for increased capability in logging transactions and to provide a way for public figures to disclose their transactions in a way that can't be altered to promote transparency and prevent insider trading amongst other shady financial moves. Additionally, we wanted people to be able to track their own transactions for personal use and auditing purposes.
+
+### References
+
+We didn't really seek out related work in this area since we knew what we wanted to create and figured we could make it simplest and most streamlined if we just built it from scratch.
+
+### Instructions
+
+To deal with the contract, run `npm run compile` and `npm run test` which should run the code and the test functions on a local machine.
+We deployed this to the Goerli testnet using the command line but since Goerli is deprecated, those commands aren't relevant going forwards. 
+To interact with the deployed contract, simply enter values for the fields and then submit it and it should be present on the blockchain to look back on in the future. You can do all of this from etherscan.
+
+### Documentation
+
+All the functions that originated in the contract as well as the ones we added are working successfully with the Goerli testnet deployed contract. We didn't deploy it to any newer testnets, so the code may not have successfully been updated for that, but considering it is updated with the main class repository it should be updated just fine.
+
+### Future Work
+
+Expanding the amount of data that can be stored (such as different fields) would be ideal. Additionally, moving forwards and separating the functionality into different smart contracts would probably be better (one for personal use and one for public viewing for example). We discussed this in more detail in the video linked above.
+
 ## Introduction to Smart Contracts
 
 (created by [Alexander Kurz](https://www.chapman.edu/our-faculty/alexander-kurz) and [Ronan Kearns](https://www.linkedin.com/in/ronank/) from Chapman and [Jeff Turner](https://www.linkedin.com/in/composedao/) and Stephen Preston from ComposeDAO)
